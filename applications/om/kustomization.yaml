@@ -1,0 +1,6 @@
+resources:
+- https://github.com/opensourceways/infra-common/common-services/om
+patchesStrategicMerge:
+- secrets.yaml
+commonLabels:
+  common-app: mindspore-om-git
