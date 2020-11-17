@@ -211,14 +211,33 @@ data:
     # Copy plugins to shared volume
     yes n | cp -i /usr/share/jenkins/ref/plugins/* /var/jenkins_plugins/;
   plugins.txt: |-
-    kubernetes:1.18.2
-    workflow-job:2.33
+    kubernetes:1.27.5
+    workflow-job:2.40
     workflow-aggregator:2.6
-    credentials-binding:1.19
-    git:3.11.0
-    gitee:1.1.3
-    ssh-slaves:1.31.0
-
+    credentials-binding:1.24
+    git:4.4.5
+    gitee:1.1.15
+    ssh-slaves:1.31.2
+    http_request:1.8.27
+    ansicolor:0.7.3
+    build-timeout:1.20
+    rebuild:1.31
+    timestamper:1.11.8
+    ws-cleanup:0.38
+    log-parser:2.1
+    copyartifact:1.45.2
+    thinBackup:1.10
+    warnings-ng:8.4.4
+    startup-trigger-plugin:2.9.3
+    groovy:2.3
+    extended-choice-parameter:0.82
+    jobConfigHistory:2.26
+    changelog-history:1.7
+    pipeline-config-history:1.6
+    blueocean:1.24.3
+    role-strategy:3.1
+    job-import-plugin:3.4
+    nodelabelparameter:1.7.2
 
 ---
 # Source: jenkins/templates/home-pvc.yaml
@@ -450,6 +469,8 @@ spec:
           env:
             - name: JAVA_OPTS
               value: ""
+            - name: TZ
+              value: "Asia/Shanghai"
             - name: JENKINS_OPTS
               value: ""
             - name: JENKINS_SLAVE_AGENT_PORT
