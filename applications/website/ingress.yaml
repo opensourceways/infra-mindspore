@@ -8,8 +8,6 @@ metadata:
       rewrite ^/icla https://clasign.osinfra.cn/sign/Z2l0ZWUlMkZtaW5kc3BvcmU= redirect;
     nginx.ingress.kubernetes.io/proxy-body-size: 1024m
     nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
 #    cert-manager.io/cluster-issuer: letsencrypt-issuer
 #    nginx.ingress.kubernetes.io/proxy-buffering: "on"
 #    nginx.ingress.kubernetes.io/configuration-snippet: |
